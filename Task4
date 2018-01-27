@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+void my_putchar(char c)
+{
+  write(1, &c, 1);
+}
+
+int my_isneg(int nombre_entre)
+    {
+        if(nombre_entre>=0)
+            my_putchar('P');
+        else
+            my_putchar('N');
+return 0;
+    }
+
+int main()
+{
+    int nombre_entre=0;
+
+    scanf("%d", &nombre_entre);
+    my_isneg(nombre_entre);
+return 0;
+}
